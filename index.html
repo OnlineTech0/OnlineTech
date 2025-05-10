@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Master High Demand Skills & Start Earning ₹15,000–₹20,000/Month — 100% Practical, Proven Courses</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #f0f0f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1rem 1rem 3rem;
+      overflow-x: hidden;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    header {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 1.9rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1.2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    header p {
+      font-weight: 300;
+      font-size: 1rem;
+      color: #dcdce8cc;
+      max-width: 280px;
+      margin: 0 auto;
+      line-height: 1.4;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.15);
+    }
+    #special-offer {
+      background: linear-gradient(90deg, #ff8a00, #e52e71);
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      margin: 1rem 0 2rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(229, 46, 113, 0.4);
+      font-size: 1.1rem;
+    }
+    #referral-section {
+      background: rgba(255 255 255 / 0.1);
+      border-radius: 16px;
+      padding: 12px 15px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 20px rgb(102 126 234 / 0.4);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-align: center;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #referral-section strong {
+      color: #ffdd57;
+      font-weight: 700;
+    }
+    #referral-count {
+      font-weight: 700;
+      color: #a0d911;
+    }
+    #referral-btn {
+      background: #764ba2;
+      border: none;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: 15px;
+      box-shadow: 0 0 8px #764ba2aa;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    #referral-btn:hover {
+      background: #8056b9;
+      box-shadow: 0 0 12px #764ba2;
+    }
+    #courses {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      width: 100%;
+    }
+    .course-card {
+      background: linear-gradient(145deg, #5e54a4, #7b61bc);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(39, 35, 103, 0.35), inset 0 0 10px rgba(255, 255, 255, 0.15);
+      display: flex;
+      flex-direction: column;
+      color: #f0e9ff;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+    .best-seller {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: linear-gradient(90deg, #ff8a00, #e52e71);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .course-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 300/160;
+    }
+    .course-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .course-desc {
+      font-weight: 300;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      color: #e4dfffcc;
+      line-height: 1.4;
+    }
+    .features-list {
+      margin-bottom: 12px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      font-size: 0.8rem;
+    }
+    .feature-icon {
+      margin-right: 6px;
+      color: #a0d911;
+    }
+    .price-wrapper {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .price-regular {
+      font-size: 0.85rem;
+      text-decoration: line-through;
+      color: #bb99ffaa;
+    }
+    .price-discounted {
+      font-size: 1.4rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ffcc33, #ffaa00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .students-count {
+      font-size: 0.75rem;
+      color: #dcdce8aa;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .buy-btn {
+      margin-top: 14px;
+      padding: 12px 0;
+      background: linear-gradient(90deg, #ff8a00, #e52e71);
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f9f9f9;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(229, 46, 113, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .buy-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(229, 46, 113, 0.5);
+    }
+    .buy-btn .icon {
+      font-size: 1.2rem;
+    }
+    .buy-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: all 0.6s ease;
+    }
+    .buy-btn:hover::after {
+      left: 100%;
+    }
+    /* Success Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-content {
+      background: linear-gradient(145deg, #5e54a4, #7b61bc);
+      border-radius: 18px;
+      padding: 25px;
+      width: 90%;
+      max-width: 320px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transform: translateY(20px);
+      transition: transform 0.3s;
+    }
+    .modal.active .modal-content {
+      transform: translateY(0);
+    }
+    .success-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #a0d911, #52c41a);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 15px;
+      box-shadow: 0 4px 10px rgba(160, 217, 17, 0.4);
+    }
+    .modal-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .payment-info {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px;
+      border-radius: 12px;
+      margin: 15px 0;
+      text-align: left;
+    }
+    .payment-info p {
+      font-size: 0.85rem;
+      margin-bottom: 5px;
+    }
+    .payment-info strong {
+      color: #ffdd57;
+    }
+    .close-btn {
+      background: linear-gradient(90deg, #ff8a00, #e52e71);
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(229, 46, 113, 0.4);
+    }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #dcdce8aa;
+      width: 100%;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 8px;
+    }
+    .footer-links a {
+      color: #dcdce8aa;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: #f0f0f5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Master High-Demand Skills & Start Earning ₹15,000–₹20,000/Month</h1>
+    <p>100% Practical, Proven Courses — Trusted by 1,000+ Learners to Start Earning Online.</p>
+  </header>
+
+  <div id="special-offer" style="cursor:pointer;" onclick="window.location.href='https://wa.me/+9779847699795?text=I%20am%20interested%20in%20the%20courses%20you%20offer.'" onclick="window.location.href='https://wa.me/919847699795?text=I'm%20interested%20in%20your%20courses!'" style="cursor:pointer;">🔥 Limited Time: Only ₹399! 🔥</div>
+
+  <section id="referral-section">
+    <div>Refer friends: <span id="referral-count">0</span>/15</div>
+    <button id="referral-btn">Invite +1</button>
+  </section>
+
+  <main id="courses"></main>
+
+  <div class="modal" id="success-modal">
+    <div class="modal-content">
+      <div class="success-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h2 class="modal-title">Purchase Successful!</h2>
+      <p>Thank you for purchasing our course.</p>
+      <div class="payment-info">
+        <p>Course: <strong id="modal-course-title"></strong></p>
+        <p>Amount Paid: <strong id="modal-price"></strong></p>
+        <p>Order ID: <strong id="modal-order-id"></strong></p>
+      </div>
+      <p>Check your email for course access details.</p>
+      <button class="close-btn" onclick="closeModal()">Continue</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Learn & Earn Academy. All rights reserved.
+    <div class="footer-links">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    const coursesData = [
+      {
+        id: 'freelance-webdev',
+        title: "Freelance Web Development",
+        desc: "Build stunning websites and start earning independently.",
+        price: 399,
+        img: "webdev-course.jpg",
+        tag: "Best Seller",
+        students: 732,
+        features: ["2+ Hours of Video", "5 Real Projects", "Portfolio Building", "Mentorship"]
+      },
+      {
+        id: 'content-writing',
+        title: "Content Writing",
+        desc: "Learn to craft compelling content that sells.",
+        price: 399,
+        img: "content-writing-course.jpg",
+        tag: "Popular",
+        students: 514,
+        features: ["5+ Hours of Training", "SEO Optimization", "Portfolio Creation", "Client Templates"]
+      },
+      {
+        id: 'chatgpt-course',
+        title: "ChatGPT Full Course",
+        desc: "Harness the power of AI-driven chatbots for your projects.",
+        price: 399,
+        img: "chatgpt-course.jpg",
+        tag: "New",
+        students: 328,
+        features: ["5+ Hours of Training", "Prompt Engineering", "Business Use Cases", "Client Acquisition"]
+      },
+      {
+        id: 'earn-money-online',
+        title: "Earn Money Online",
+        desc: "Discover legitimate and effective online income streams.",
+        price: 399,
+        img: "earn-money-course.jpg",
+        tag: "Trending",
+        students: 903,
+        features: ["10+ Income Streams", "Step-by-Step Guide", "Passive Income Methods", "Support Community"]
+      },
+      {
+        id: 'video-editing',
+        title: "Video Editing",
+        desc: "Create captivating videos that engage audiences.",
+        price: 399,
+        img: "video-editing-course.jpg",
+        students: 416,
+        features: ["7+ Hours of Content", "Practice Projects", "Effects Library", "Client Acquisition"]
+      }
+    ];
+
+    let referralCount = 0;
+    const referralTarget = 15;
+    const normalPrice = 499;
+    const discountedPrice = 399;
+
+    const coursesContainer = document.getElementById('courses');
+    const referralCountEl = document.getElementById('referral-count');
+    const referralBtn = document.getElementById('referral-btn');
+    const successModal = document.getElementById('success-modal');
+    const modalCourseTitle = document.getElementById('modal-course-title');
+    const modalPrice = document.getElementById('modal-price');
+    const modalOrderId = document.getElementById('modal-order-id');
+
+    // Referral button
+    referralBtn.addEventListener('click', () => {
+      referralCount++;
+      if (referralCount > 15) referralCount = 15;
+      referralCountEl.textContent = referralCount;
+      renderCourses();
+    });
+
+    function generateOrderId() {
+      return 'ORD-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+    }
+
+    
+function buyNow(course) {
+  const phone = "9847699795";
+  const message = encodeURIComponent(`Hi, I'm interested in the "${course.title}" course.`);
+  window.location.href = `https://wa.me/+977${phone}?text=${message}`;
+}
+
+
+    function closeModal() {
+      successModal.classList.remove('active');
+    }
+
+    function renderCourses() {
+      coursesContainer.innerHTML = '';
+
+      coursesData.forEach(course => {
+        const card = document.createElement('div');
+        card.className = 'course-card';
+
+        // Add best seller tag if present
+        if (course.tag) {
+          const tagEl = document.createElement('div');
+          tagEl.className = 'best-seller';
+          tagEl.textContent = course.tag;
+          card.appendChild(tagEl);
+        }
+
+        const img = document.createElement('img');
+        img.src = course.img;
+        img.alt = course.title;
+        img.onerror = function() {
+          // Fallback if image doesn't load
+          this.src = "default-course.jpg";
+        };
+
+        const title = document.createElement('h2');
+        title.className = 'course-title';
+        title.textContent = course.title;
+
+        const desc = document.createElement('p');
+        desc.className = 'course-desc';
+        desc.textContent = course.desc;
+
+        // Features list
+        const features = document.createElement('div');
+        features.className = 'features-list';
+        
+        course.features.forEach(feature => {
+          const featureItem = document.createElement('div');
+          featureItem.className = 'feature-item';
+          
+          const icon = document.createElement('span');
+          icon.className = 'feature-icon';
+          icon.innerHTML = '✓';
+          
+          const text = document.createElement('span');
+          text.textContent = feature;
+          
+          featureItem.appendChild(icon);
+          featureItem.appendChild(text);
+          features.appendChild(featureItem);
+        });
+
+        // Students count
+        const students = document.createElement('div');
+        students.className = 'students-count';
+        students.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> ${course.students} students enrolled`;
+
+        const priceWrapper = document.createElement('div');
+        priceWrapper.className = 'price-wrapper';
+
+        const priceRegular = document.createElement('span');
+        priceRegular.className = 'price-regular';
+        priceRegular.textContent = `₹${normalPrice}`;
+
+        const priceDiscounted = document.createElement('span');
+        priceDiscounted.className = 'price-discounted';
+        priceDiscounted.textContent = `₹${discountedPrice}`;
+
+        priceWrapper.appendChild(priceRegular);
+        priceWrapper.appendChild(priceDiscounted);
+
+        const buyBtn = document.createElement('button');
+        buyBtn.className = 'buy-btn';
+        buyBtn.innerHTML = '<span class="icon">🛒</span> <span>BUY NOW</span>';
+        buyBtn.onclick = () => {
+          buyNow(course);
+        };
+
+        card.appendChild(img);
+        card.appendChild(title);
+        card.appendChild(desc);
+        card.appendChild(features);
+        card.appendChild(students);
+        card.appendChild(priceWrapper);
+        card.appendChild(buyBtn);
+
+        coursesContainer.appendChild(card);
+      });
+    }
+
+    // Initial render
+    renderCourses();
+  </script>
+</body>
+</html>
